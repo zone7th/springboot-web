@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://10.201.250.239:8761/eureka/
 spring:
   application:
     name: springboot-web
@@ -9,7 +9,7 @@ spring:
     config:
       label: master
       profile: dev
-#      uri: http://localhost:8751/
+#      uri: http://10.201.250.239:8751/
       discovery:
          enabled: true
          serviceId: config-server
