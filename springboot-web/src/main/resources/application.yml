@@ -13,8 +13,9 @@ spring:
       discovery:
          enabled: true
          serviceId: config-server
-management:
-  security:
-    enabled: false
-server:
-  port: 8080
+  
+
+  
+
+  
+  

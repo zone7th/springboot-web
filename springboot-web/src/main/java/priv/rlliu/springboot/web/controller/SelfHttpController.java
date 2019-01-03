@@ -1,10 +1,9 @@
 package priv.rlliu.springboot.web.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import priv.rlliu.springboot.web.vo.RecVo;
 import priv.rlliu.springboot.web.vo.ReqVo;
@@ -16,8 +15,8 @@ import priv.rlliu.springboot.web.vo.ReqVo;
  * @date 2019年1月2日 下午2:15:51
  * 
  */
-@Controller
-@RequestMapping(value = "/selfhttp", produces = {"application/json;charset=UTF-8"})
+@RestController
+@RequestMapping(value = "/selfhttp")
 public class SelfHttpController {
 	  /**
 	   * 
@@ -27,8 +26,7 @@ public class SelfHttpController {
 	   * @author Martin
 	   * @date 2019年1月2日 下午7:09:12
 	   */
-	  	@RequestMapping(method = RequestMethod.POST, value = "/receive", produces = {"application/json;charset=UTF-8"})
-	    @ResponseBody
+	  	@RequestMapping(method = RequestMethod.POST, value = "/receive")
 	    public RecVo receive(@RequestBody ReqVo req) {
 	  		RecVo recVo =  new RecVo();
 	  		recVo.setIsSuccess("TRUE");

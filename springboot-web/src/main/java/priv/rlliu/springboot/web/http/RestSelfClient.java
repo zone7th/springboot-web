@@ -16,7 +16,7 @@ import priv.rlliu.springboot.web.vo.ReqVo;
  * url.selfapi=http://10.201.250.239:8585/selfhttpX/receive
  */
 @FeignClient(name = "selfapi", url = "${url.selfapi}")
-@RequestMapping(value = "/selfhttpX", produces = {"application/json;charset=UTF-8"})
+@RequestMapping(value = "/selfhttpX")
 public interface  RestSelfClient {
 	@RequestMapping(value = "/receive", method = RequestMethod.POST)
 	RecVo postSelfRemoteTest(@RequestBody ReqVo req);
